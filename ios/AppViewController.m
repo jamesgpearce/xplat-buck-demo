@@ -16,6 +16,8 @@
 
 #import "AppViewController.h"
 
+#include <hello/hello.h>
+
 @interface AppViewController ()
 
 @end
@@ -27,7 +29,7 @@
 - (void) viewDidLoad {
     self.view.backgroundColor = [UIColor whiteColor];
     _label = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.view.bounds.size.width, 80.0f)];
-    _label.text = @"Hello from Buck!";
+    _label.text = [NSString stringWithCString:helloString() encoding:NSASCIIStringEncoding];
     _label.textAlignment = NSTextAlignmentCenter;
     _label.font = [UIFont boldSystemFontOfSize:32.0f];
     _label.adjustsFontSizeToFitWidth = YES;

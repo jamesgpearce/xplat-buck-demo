@@ -1,0 +1,9 @@
+cxx_library(
+  name = 'hello',
+  srcs = glob(['*.c']),
+  exported_headers = ['hello.h'],
+  visibility = [
+    'PUBLIC',
+  ],
+)
+
