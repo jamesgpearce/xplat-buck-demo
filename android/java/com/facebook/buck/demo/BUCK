@@ -9,3 +9,7 @@ android_library(
     '//android:demo-app',
   ],
 )
+
+project_config(
+  src_target = ':lib',
+)
