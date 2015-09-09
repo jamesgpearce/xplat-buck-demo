@@ -26,3 +26,6 @@
 /.idea/inspectionProfiles
 /.idea/runConfigurations
 /.idea/vcs.xml
+
+# vim temp files
+*.swp
