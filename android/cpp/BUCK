@@ -1,0 +1,10 @@
+cxx_library(
+  name = 'jni',
+  srcs = glob(['*.cpp']),
+  deps = [
+    '//common:hello',
+  ],
+  visibility = [
+    '//android/java/com/facebook/buck/demo:lib',
+  ],
+)

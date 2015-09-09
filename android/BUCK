@@ -1,0 +1,12 @@
+android_binary(
+  name = 'demo-app',
+  manifest = 'AndroidManifest.xml',
+  keystore = '//android/keystores:debug',
+  deps = [
+    '//android/java/com/facebook/buck/demo:lib',
+  ],
+)
+
+project_config(
+  src_target = ':demo-app',
+)
