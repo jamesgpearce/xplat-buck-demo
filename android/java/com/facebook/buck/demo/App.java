@@ -16,8 +16,6 @@
 
 package com.facebook.buck.demo;
 
-import com.facebook.buck.demo.R;
-
 import android.app.Activity;
 import android.os.Bundle;
 

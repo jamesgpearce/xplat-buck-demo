@@ -7,3 +7,6 @@ cxx_library(
   ],
 )
 
+project_config(
+  src_target = ':hello'
+)

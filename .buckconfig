@@ -3,3 +3,13 @@
 [cxx]
   default_platform = iphonesimulator-x86_64
   cflags = -g
+[java]
+  src_roots = /android/java/
+[project]
+    default_android_manifest = //android/AndroidManifest.xml
+    ignore = .buckd, \
+             .hg, \
+             .git, \
+             .idea, \
+             buck-cache, \
+             buck-out, \
