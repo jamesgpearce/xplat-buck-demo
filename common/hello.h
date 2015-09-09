@@ -14,4 +14,12 @@
  * under the License.
  */
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 const char *helloString();
+
+#ifdef __cplusplus
+} // extern "C"
+#endif
