@@ -1,10 +1,22 @@
 [cache]
   mode = dir
+
 [cxx]
   default_platform = iphonesimulator-x86_64
   cflags = -g
+
+[ndk]
+  ndk_version = r10e
+  app_platform = android-21
+
+[android]
+  target = Google Inc.:Google APIs:23
+
 [java]
   src_roots = /android/java/
+  source_level = 6
+  target_level = 6
+
 [project]
     default_android_manifest = //android/AndroidManifest.xml
     ignore = .buckd, \
