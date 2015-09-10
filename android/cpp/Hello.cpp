@@ -17,6 +17,7 @@
 #include <jni.h>
 #include "common/hello.h"
 
+extern "C"
 jstring JNICALL
 Java_com_facebook_buck_demo_Hello_getHelloString(JNIEnv *env, jobject obj)
 {

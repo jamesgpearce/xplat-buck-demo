@@ -18,6 +18,7 @@ package com.facebook.buck.demo;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.widget.TextView;
 
 public class App extends Activity {
   @Override
@@ -25,5 +26,15 @@ public class App extends Activity {
     super.onCreate(savedInstanceState);
 
     setTitle(R.string.app_name);
+    setContentView(R.layout.hello);
+    TextView textView = (TextView) findViewById(R.id.hello_text);
+    try {
+      String message = new Hello().getHelloString();
+      textView.setText(message);
+    } catch (Exception e) {
+      textView.setText(String.format(
+              "Unable to load jni library! %s",
+              e.getMessage()));
+    }
   }
 }

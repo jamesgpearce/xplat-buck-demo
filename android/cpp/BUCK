@@ -1,6 +1,7 @@
 cxx_library(
   name = 'jni',
   srcs = glob(['*.cpp']),
+  soname = 'libjni.so',
   deps = [
     '//common:hello',
   ],

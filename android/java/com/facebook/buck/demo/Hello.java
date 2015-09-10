@@ -17,5 +17,8 @@
 package com.facebook.buck.demo;
 
 public class Hello {
+  public Hello() {
+    System.loadLibrary("jni");
+  }
   public native String getHelloString();
 }
