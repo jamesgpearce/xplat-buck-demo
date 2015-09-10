@@ -2,6 +2,9 @@ cxx_library(
   name = 'jni',
   srcs = glob(['*.cpp']),
   soname = 'libjni.so',
+  compiler_flags = [
+    '-fvisibility=hidden',
+  ],
   deps = [
     '//common:hello',
   ],
