@@ -25,9 +25,6 @@ apple_binary(
     '$SDKROOT/System/Library/Frameworks/UIKit.framework',
     '$SDKROOT/System/Library/Frameworks/Foundation.framework',
   ],
-  libraries = [
-    '$SDKROOT/usr/lib/libobjc.dylib',
-  ],
 )
 
 apple_package(

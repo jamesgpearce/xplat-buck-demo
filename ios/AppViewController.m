@@ -16,7 +16,7 @@
 
 #import "AppViewController.h"
 
-#include <hello/hello.h>
+#include "common/hello.h"
 
 @interface AppViewController ()
 
