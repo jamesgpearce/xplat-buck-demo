@@ -3,7 +3,7 @@ android_library(
   srcs = glob(['*.java']),
   deps = [
     '//android/resources:res',
-    '//android/cpp:jni',
+    '//android/cxx:jni',
   ],
   visibility = [
     '//android:demo-app',
