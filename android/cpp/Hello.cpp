@@ -18,7 +18,7 @@
 #include "common/hello.h"
 
 extern "C"
-jstring JNICALL
+JNIEXPORT jstring
 Java_com_facebook_buck_demo_Hello_getHelloString(JNIEnv *env, jobject obj)
 {
   const char *str = helloString();
