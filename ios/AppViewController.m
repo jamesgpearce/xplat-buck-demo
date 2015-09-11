@@ -16,20 +16,26 @@
 
 #import "AppViewController.h"
 
-#include "common/hello.h"
-
 @interface AppViewController ()
 
 @end
 
 @implementation AppViewController {
     UILabel *_label;
+    NSString *_helloString;
+}
+
+- (instancetype) initWithHelloString:(NSString *)helloString {
+    if ((self = [super initWithNibName:nil bundle:nil])) {
+        _helloString = helloString;
+    }
+    return self;
 }
 
 - (void) viewDidLoad {
     self.view.backgroundColor = [UIColor whiteColor];
     _label = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.view.bounds.size.width, 80.0f)];
-    _label.text = [NSString stringWithCString:helloString() encoding:NSASCIIStringEncoding];
+    _label.text = _helloString;
     _label.textAlignment = NSTextAlignmentCenter;
     _label.font = [UIFont boldSystemFontOfSize:32.0f];
     _label.adjustsFontSizeToFitWidth = YES;
