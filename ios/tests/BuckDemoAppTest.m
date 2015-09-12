@@ -9,8 +9,12 @@
 @implementation BuckDemoAppTest
 
 - (void)testHello {
-  AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-  XCTAssertEqualObjects(@"Hello from Buck!", [appDelegate helloString], @"Hello string not exposed by test host");
+  AppDelegate *appDelegate =
+    (AppDelegate *)[[UIApplication sharedApplication] delegate];
+  XCTAssertEqualObjects(
+    @"Hello from Buck!",
+    [appDelegate helloString],
+    @"Greeting should come from cross-platform code");
 }
 
 @end
