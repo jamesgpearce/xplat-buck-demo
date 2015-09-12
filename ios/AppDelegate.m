@@ -17,16 +17,21 @@
 #import "AppDelegate.h"
 #import "AppViewController.h"
 
+#import "common/hello.h"
+
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
+@synthesize window;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.helloString = [NSString stringWithUTF8String:helloString()];
 
-    UIViewController *viewController = [[AppViewController alloc] init];
+    UIViewController *viewController = [[AppViewController alloc] initWithHelloString:_helloString];
 
     self.window.rootViewController = viewController;
     [self.window makeKeyAndVisible];

@@ -9,6 +9,7 @@ apple_bundle(
   binary = ':BuckDemoAppBinary',
   extension = 'app',
   info_plist = 'Info.plist',
+  tests = [':BuckDemoAppTest'],
 )
 
 apple_binary(
@@ -30,4 +31,17 @@ apple_binary(
 apple_package(
   name = 'BuckDemoAppPackage',
   bundle = ':BuckDemoApp',
+)
+
+apple_test(
+  name = 'BuckDemoAppTest',
+  extension = 'xctest',
+  test_host_app = ':BuckDemoApp',
+  srcs = ['tests/BuckDemoAppTest.m'],
+  info_plist = 'tests/Test.plist',
+  frameworks = [
+    '$SDKROOT/System/Library/Frameworks/Foundation.framework',
+    '$PLATFORM_DIR/Developer/Library/Frameworks/XCTest.framework',
+    '$SDKROOT/System/Library/Frameworks/UIKit.framework',
+  ],
 )
