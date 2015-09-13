@@ -8,6 +8,10 @@
   # Many ARC APIs don't compile with separate preprocess and compile.
   combined_preprocess_and_compile = true
 
+[alias]
+  demo_app_android = //android:demo-app
+  demo_app_ios = //ios:BuckDemoApp
+
 [apple]
   xctool_zip_target = //third-party/ios/xctool:xctool-minimal-zip
 

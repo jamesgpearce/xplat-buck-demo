@@ -1,4 +1,0 @@
-Sample showing app with shared native code.
-
-Android: buck install -r //android:demo-app
-iOS: buck install -r //ios:BuckDemoApp
